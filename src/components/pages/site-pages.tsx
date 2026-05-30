@@ -14,6 +14,7 @@ import { assets } from "@/content/assets";
 import { productFamilies } from "@/content/families";
 import { getProductByRouteKey, products, type Product } from "@/content/products";
 import { woodSpecies } from "@/content/woods";
+import { JsonLdScript, productJsonLd } from "@/lib/jsonld";
 import type { Locale } from "@/lib/locales";
 import { route, type RouteKey } from "@/lib/routes";
 
@@ -344,6 +345,7 @@ export function ProductDetailPage({ locale, routeKey }: { locale: Locale; routeK
 
   return (
     <PageShell locale={locale} routeKey={routeKey}>
+      <JsonLdScript data={productJsonLd(product, locale)} />
       <section className="bg-surface py-16">
         <Container className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
           <div>
