@@ -11,6 +11,8 @@ type ProductCardProps = {
 };
 
 export function ProductCard({ product, locale }: ProductCardProps) {
+  const ctaLabel = locale === "fr" ? "Voir le produit" : locale === "en" ? "View product" : "عرض المنتج";
+
   return (
     <Link href={route(product.routeKey, locale)} className="group block overflow-hidden rounded-lg border border-line bg-surface shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
       <div className="relative aspect-[4/3] overflow-hidden bg-surface-strong">
@@ -21,7 +23,7 @@ export function ProductCard({ product, locale }: ProductCardProps) {
         <h3 className="mt-2 text-xl font-semibold leading-tight text-brand-strong">{product.name[locale]}</h3>
         <p className="mt-3 line-clamp-3 text-sm leading-6 text-muted">{product.summary[locale]}</p>
         <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand">
-          RFQ <ArrowRight className="size-4 transition group-hover:translate-x-1" aria-hidden />
+          {ctaLabel} <ArrowRight className="size-4 transition group-hover:translate-x-1" aria-hidden />
         </span>
       </div>
     </Link>

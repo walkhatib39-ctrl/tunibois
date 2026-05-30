@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
+import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/site/footer";
-import { Header } from "@/components/site/header";
 import { JsonLdScript, organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
 import { localeDirections, type Locale } from "@/lib/locales";
 import type { RouteKey } from "@/lib/routes";

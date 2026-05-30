@@ -10,6 +10,12 @@ export const localeLabels: Record<Locale, string> = {
   ar: "العربية",
 };
 
+export const localeFlagIcons: Record<Locale, string> = {
+  fr: "/assets/flags/fr.svg",
+  en: "/assets/flags/gb.svg",
+  ar: "/assets/flags/tn.svg",
+};
+
 export const localeDirections: Record<Locale, "ltr" | "rtl"> = {
   fr: "ltr",
   en: "ltr",
