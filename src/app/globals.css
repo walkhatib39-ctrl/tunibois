@@ -1,26 +1,69 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f7f3ec;
+  --foreground: #17241b;
+  --muted: #6a6f68;
+  --brand: #24391f;
+  --brand-strong: #172718;
+  --accent: #b8773f;
+  --accent-soft: #f0c18c;
+  --line: #ded6c8;
+  --surface: #fffaf2;
+  --surface-strong: #efe5d6;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-line: var(--line);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--brand-strong);
+}
+
+a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.field {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--line);
+  background: white;
+  padding: 0.8rem 0.9rem;
+  color: var(--foreground);
+  outline: none;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.field:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgb(184 119 63 / 18%);
 }
