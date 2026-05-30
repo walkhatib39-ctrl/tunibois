@@ -18,7 +18,12 @@ export function IndustrialProcessSection({ locale }: IndustrialProcessSectionPro
   return (
     <section className="bg-brand py-20 text-white">
       <Container>
-        <SectionHeading eyebrow="Process" title={title} intro={industrialProcessIntro[locale]} className="text-white [&_h2]:text-white [&_p]:text-white/72" />
+        <SectionHeading
+          eyebrow={locale === "fr" ? "Méthode industrielle" : locale === "en" ? "Industrial method" : "منهجية صناعية"}
+          title={title}
+          intro={industrialProcessIntro[locale]}
+          className="text-white [&_h2]:text-white [&_p]:text-white/72"
+        />
         <div className="mt-12 grid gap-px overflow-hidden rounded-lg border border-white/14 bg-white/14 md:grid-cols-2 lg:grid-cols-4">
           {industrialProcess.map((step, index) => (
             <article key={step.title.fr} className="bg-brand p-6">
