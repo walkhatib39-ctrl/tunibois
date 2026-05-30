@@ -22,9 +22,9 @@ export function ProductsIndexPage({ locale }: ProductsIndexPageProps) {
       ar: "منتجات خشبية للصناعيين والموزعين والمستوردين",
     },
     text: {
-      fr: "Familles produits, variantes, contraintes techniques et fiches disponibles pour préparer une demande claire avant devis.",
-      en: "Product families, variants, technical constraints and available sheets to prepare a clear request before quotation.",
-      ar: "عائلات المنتجات والمتغيرات والمتطلبات التقنية والبطاقات المتاحة لتحضير طلب واضح قبل التسعير.",
+      fr: "Catégories, produits, variantes et fiches disponibles pour préparer une demande claire avant devis.",
+      en: "Categories, products, variants and available sheets to prepare a clear request before quotation.",
+      ar: "الفئات والمنتجات والمتغيرات والبطاقات المتاحة لتحضير طلب واضح قبل التسعير.",
     },
   };
 

@@ -1,8 +1,7 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faCheck, faClipboardList } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { ProductCard } from "@/components/cards/product-card";
-import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import type { ProductFamily } from "@/content/product-families";
 import type { Product } from "@/content/products";
@@ -26,7 +25,7 @@ export function ProductFamilySection({ family, index, locale, products }: Produc
           <div className="flex items-center gap-3 text-sm font-semibold text-accent">
             <span>0{index + 1}</span>
             <span className="h-px w-10 bg-accent/50" aria-hidden />
-            <span>{locale === "fr" ? "Famille produit" : locale === "en" ? "Product family" : "عائلة منتجات"}</span>
+            <span>{locale === "fr" ? "Catégorie produit" : locale === "en" ? "Product category" : "فئة منتجات"}</span>
           </div>
           <h2 className="mt-4 text-3xl font-semibold leading-tight text-brand-strong sm:text-4xl">{family.title[locale]}</h2>
           <p className="mt-4 text-lg leading-8 text-muted">{family.text[locale]}</p>
@@ -37,29 +36,17 @@ export function ProductFamilySection({ family, index, locale, products }: Produc
             <div className="relative aspect-[16/11] overflow-hidden bg-surface-strong">
               <Image src={family.image} alt={family.imageAlt[locale]} fill sizes="(min-width: 1024px) 42vw, 100vw" className="object-cover" />
             </div>
-            <div className="p-6 sm:p-8">
-              <p className="rounded-md border border-line bg-surface p-4 text-sm leading-6 text-brand">{family.proof[locale]}</p>
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                <Button href={route("contact", locale)} variant="secondary">
-                  {locale === "fr" ? "Étudier une demande" : locale === "en" ? "Review a request" : "دراسة طلب"}
-                </Button>
-                {products.length > 0 ? (
-                  <Button href={`#${family.id}-products`} variant="outline">
-                    {locale === "fr" ? "Voir les fiches" : locale === "en" ? "View sheets" : "عرض البطاقات"}
-                  </Button>
-                ) : null}
-              </div>
-            </div>
           </div>
 
           <div>
-            <div className="grid gap-3 sm:grid-cols-2">
-              {family.examples[locale].map((example) => (
-                <div key={example} className="flex min-h-16 items-center gap-3 rounded-md border border-line bg-background p-4 text-sm font-semibold text-brand shadow-sm">
-                  <FontAwesomeIcon icon={faCheck} className="size-3 text-accent" aria-hidden />
-                  {example}
-                </div>
-              ))}
+            <div className="border-y border-line">
+              <div className="grid gap-x-8 sm:grid-cols-2">
+                {family.products[locale].map((product) => (
+                  <div key={product} className="border-b border-line py-4 text-base font-semibold text-brand last:border-b-0 sm:[&:nth-last-child(-n+2)]:border-b-0">
+                    {product}
+                  </div>
+                ))}
+              </div>
             </div>
 
             {products.length > 0 ? (
@@ -78,27 +65,17 @@ export function ProductFamilySection({ family, index, locale, products }: Produc
                 </div>
               </div>
             ) : (
-              <div className="mt-8 rounded-lg border border-line bg-background p-6 shadow-sm">
-                <div className="flex items-start gap-4">
-                  <div className="flex size-11 shrink-0 items-center justify-center rounded-md bg-brand text-accent-soft">
-                    <FontAwesomeIcon icon={faClipboardList} className="size-5" aria-hidden />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-semibold text-brand-strong">
-                      {locale === "fr" ? "Étude sur cahier des charges" : locale === "en" ? "Specification-based review" : "دراسة حسب دفتر الشروط"}
-                    </h3>
-                    <p className="mt-3 leading-7 text-muted">
-                      {locale === "fr"
-                        ? "Envoyez vos plans, dimensions, essences, quantités et contraintes de finition pour vérifier la faisabilité et préparer une réponse commerciale."
-                        : locale === "en"
-                          ? "Send drawings, dimensions, species, quantities and finish constraints to review feasibility and prepare a commercial answer."
-                          : "أرسل الرسومات والأبعاد وأنواع الخشب والكميات ومتطلبات التشطيب لدراسة الجدوى وتحضير رد تجاري."}
-                    </p>
-                    <Button href={route("contact", locale)} className="mt-5">
-                      {locale === "fr" ? "Envoyer un cahier des charges" : locale === "en" ? "Send specifications" : "إرسال دفتر الشروط"}
-                    </Button>
-                  </div>
-                </div>
+              <div className="mt-8 border-t border-line pt-6">
+                <h3 className="text-2xl font-semibold text-brand-strong">
+                  {locale === "fr" ? "Étude sur cahier des charges" : locale === "en" ? "Specification-based review" : "دراسة حسب دفتر الشروط"}
+                </h3>
+                <p className="mt-3 max-w-2xl leading-7 text-muted">
+                  {locale === "fr"
+                    ? "Envoyez vos dimensions, quantités, essences, plans ou contraintes de finition pour préparer une réponse commerciale."
+                    : locale === "en"
+                      ? "Send dimensions, quantities, species, drawings or finish constraints to prepare a commercial answer."
+                      : "أرسل الأبعاد والكميات وأنواع الخشب والرسومات أو متطلبات التشطيب لتحضير رد تجاري."}
+                </p>
               </div>
             )}
           </div>

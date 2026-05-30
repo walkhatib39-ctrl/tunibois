@@ -10,10 +10,14 @@ import { productFamilies, productFamilyHref, type ProductFamilyId } from "@/cont
 import type { Locale } from "@/lib/locales";
 
 const offerIcons = {
-  "components-panels": faLayerGroup,
+  "architectural-products": faBoxOpen,
+  "decking-outdoor": faTree,
   "eco-wood": faTree,
-  "outdoor-architecture": faBoxOpen,
+  "furniture-components": faBoxOpen,
+  "olive-wood": faTree,
   "pallets-packaging": faPallet,
+  "stairs": faLayerGroup,
+  "wood-panels": faLayerGroup,
   "wood-energy": faFire,
 } satisfies Record<ProductFamilyId, IconDefinition>;
 
@@ -25,10 +29,10 @@ export function IndustrialOfferSection({ locale }: IndustrialOfferSectionProps) 
   const title = homeCopy.shared[locale].products;
   const intro =
     locale === "fr"
-      ? "Palettes, emballages, composants, panneaux, produits eco wood, bois énergie et éléments sur plan peuvent être étudiés selon vos dimensions, finitions, volumes et conditionnements."
+      ? "Les produits sont organisés par catégories industrielles: panneaux, composants, escaliers, architecture, extérieur, palettes, collection olivier, eco wood et wood energy."
       : locale === "en"
-        ? "Pallets, packaging, components, panels, eco wood products, wood energy and made-to-plan elements can be reviewed according to your dimensions, finishes, volumes and packing needs."
-        : "يمكن دراسة المنصات والتغليف والمكونات والألواح ومنتجات eco wood والطاقة الخشبية والعناصر حسب الرسم وفق الأبعاد والتشطيب والكميات والتغليف.";
+        ? "Products are organized by industrial categories: panels, components, stairs, architecture, outdoor, pallets, olive wood, eco wood and wood energy."
+        : "تم تنظيم المنتجات حسب فئات صناعية: ألواح ومكونات وسلالم ومعمار وخارج ومنصات وخشب زيتون وeco wood وطاقة خشبية.";
 
   return (
     <section className="bg-surface py-20">
@@ -59,17 +63,16 @@ export function IndustrialOfferSection({ locale }: IndustrialOfferSectionProps) 
                   </Link>
                 </h2>
                 <p className="mt-3 leading-7 text-muted">{family.text[locale]}</p>
-                <p className="mt-3 text-sm leading-6 text-brand">{family.proof[locale]}</p>
                 <div className="mt-6 grid gap-2 sm:grid-cols-2">
-                  {family.examples[locale].map((example) => (
-                    <div key={example} className="flex items-center gap-2 text-sm font-semibold text-brand">
+                  {family.products[locale].slice(0, 4).map((product) => (
+                    <div key={product} className="flex items-center gap-2 text-sm font-semibold text-brand">
                       <FontAwesomeIcon icon={faCheck} className="size-3 text-accent" aria-hidden />
-                      {example}
+                      {product}
                     </div>
                   ))}
                 </div>
                 <Link href={productFamilyHref(family.id, locale)} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-brand">
-                  {locale === "fr" ? "Explorer la famille" : locale === "en" ? "Explore family" : "استعراض العائلة"}
+                  {locale === "fr" ? "Explorer la catégorie" : locale === "en" ? "Explore category" : "استعراض الفئة"}
                   <FontAwesomeIcon icon={faArrowRight} className="size-3 transition group-hover:translate-x-1" aria-hidden />
                 </Link>
               </div>

@@ -3,7 +3,16 @@ import { route, type RouteKey } from "@/lib/routes";
 
 type LocalizedText = Record<Locale, string>;
 
-export type ProductFamilyId = "components-panels" | "eco-wood" | "outdoor-architecture" | "pallets-packaging" | "wood-energy";
+export type ProductFamilyId =
+  | "wood-panels"
+  | "furniture-components"
+  | "stairs"
+  | "architectural-products"
+  | "decking-outdoor"
+  | "pallets-packaging"
+  | "olive-wood"
+  | "eco-wood"
+  | "wood-energy";
 
 export type ProductFamily = {
   id: ProductFamilyId;
@@ -11,12 +20,116 @@ export type ProductFamily = {
   imageAlt: LocalizedText;
   title: LocalizedText;
   text: LocalizedText;
-  proof: LocalizedText;
-  examples: Record<Locale, string[]>;
+  products: Record<Locale, string[]>;
   routeKeys: RouteKey[];
 };
 
 export const productFamilies: ProductFamily[] = [
+  {
+    id: "wood-panels",
+    image: "/assets/hardydeck/wood-boards-teck.jpg",
+    imageAlt: {
+      fr: "Panneaux, plateaux et plans de travail en bois",
+      en: "Wood panels, boards and worktops",
+      ar: "ألواح وصفائح وأسطح عمل خشبية",
+    },
+    title: { fr: "Panneaux bois", en: "Wood panels", ar: "ألواح خشبية" },
+    text: {
+      fr: "Panneaux et plateaux destinés aux fabricants, agenceurs, distributeurs et industriels recherchant des formats réguliers et un cahier des charges clair.",
+      en: "Panels and boards for manufacturers, fit-out companies, distributors and industrial buyers requiring consistent formats and clear specifications.",
+      ar: "ألواح وصفائح للمصنعين وشركات التجهيز والموزعين والمشترين الصناعيين الذين يحتاجون إلى مقاسات منتظمة ومواصفات واضحة.",
+    },
+    products: {
+      fr: ["Panneaux massifs", "Panneaux collés", "Finger Joint Panels", "Edge Glued Panels", "Lamellé-Collé", "Plateaux", "Plans de travail"],
+      en: ["Solid wood panels", "Glued panels", "Finger Joint Panels", "Edge Glued Panels", "Glulam", "Boards", "Worktops"],
+      ar: ["ألواح خشب صلب", "ألواح ملصقة", "ألواح Finger Joint", "ألواح Edge Glued", "خشب لاميني", "صفائح", "أسطح عمل"],
+    },
+    routeKeys: [],
+  },
+  {
+    id: "furniture-components",
+    image: "/assets/tunibois/factory-technology.jpg",
+    imageAlt: {
+      fr: "Usinage de composants bois pour mobilier",
+      en: "Machining wood components for furniture",
+      ar: "تشغيل مكونات خشبية للأثاث",
+    },
+    title: { fr: "Composants mobilier", en: "Furniture components", ar: "مكونات الأثاث" },
+    text: {
+      fr: "Composants bois pour fabricants de mobilier, ateliers d'assemblage, sous-traitants et industriels recherchant répétabilité, dimensions et finitions maîtrisées.",
+      en: "Wood components for furniture manufacturers, assembly workshops, subcontractors and industrial buyers requiring repeatability, dimensions and controlled finishes.",
+      ar: "مكونات خشبية لمصنعي الأثاث وورش التجميع والمناولين والصناعيين الذين يحتاجون إلى تكرارية وأبعاد وتشطيبات مضبوطة.",
+    },
+    products: {
+      fr: ["Pieds de table", "Pieds de lit", "Pieds de canapé", "Traverses", "Montants", "Cadres", "Colonnes décoratives"],
+      en: ["Table legs", "Bed legs", "Sofa legs", "Rails", "Uprights", "Frames", "Decorative columns"],
+      ar: ["أرجل طاولات", "أرجل أسرة", "أرجل أرائك", "عوارض", "قوائم", "إطارات", "أعمدة زخرفية"],
+    },
+    routeKeys: [],
+  },
+  {
+    id: "stairs",
+    image: "/assets/tunibois/factory-transformation.jpg",
+    imageAlt: {
+      fr: "Fabrication de composants bois pour escaliers",
+      en: "Manufacturing wood stair components",
+      ar: "تصنيع مكونات خشبية للسلالم",
+    },
+    title: { fr: "Escaliers", en: "Stairs", ar: "السلالم" },
+    text: {
+      fr: "Éléments bois pour fabricants d'escaliers, distributeurs spécialisés et projets nécessitant des pièces régulières, usinées ou tournées.",
+      en: "Wood elements for stair manufacturers, specialized distributors and projects requiring consistent machined or turned parts.",
+      ar: "عناصر خشبية لمصنعي السلالم والموزعين المتخصصين والمشاريع التي تحتاج إلى قطع منتظمة أو مشغلة أو مخروطة.",
+    },
+    products: {
+      fr: ["Balustres", "Mains courantes", "Marches", "Poteaux"],
+      en: ["Balusters", "Handrails", "Steps", "Posts"],
+      ar: ["درابزينات", "مقابض سلالم", "درجات", "أعمدة"],
+    },
+    routeKeys: [],
+  },
+  {
+    id: "architectural-products",
+    image: "/assets/hardydeck/hardwood-joists.jpg",
+    imageAlt: {
+      fr: "Éléments bois architecturaux et décoratifs",
+      en: "Architectural and decorative wood elements",
+      ar: "عناصر خشبية معمارية وزخرفية",
+    },
+    title: { fr: "Produits architecturaux", en: "Architectural products", ar: "منتجات معمارية" },
+    text: {
+      fr: "Éléments bois pour projets d'aménagement, décoration, habillage mural, plafond et solutions architecturales sur demande.",
+      en: "Wood elements for fit-out, decoration, wall covering, ceiling covering and architectural solutions on request.",
+      ar: "عناصر خشبية لمشاريع التجهيز والديكور وتكسية الجدران والأسقف والحلول المعمارية حسب الطلب.",
+    },
+    products: {
+      fr: ["Claustras", "Panneaux acoustiques", "Revêtements muraux", "Habillages plafonds", "Éléments décoratifs"],
+      en: ["Screens", "Acoustic panels", "Wall coverings", "Ceiling coverings", "Decorative elements"],
+      ar: ["فواصل خشبية", "ألواح صوتية", "تكسية جدران", "تلبيسات أسقف", "عناصر زخرفية"],
+    },
+    routeKeys: [],
+  },
+  {
+    id: "decking-outdoor",
+    image: "/assets/hardydeck/outdoor-wood-tiles.jpg",
+    imageAlt: {
+      fr: "Lames, dalles et éléments bois pour extérieur",
+      en: "Outdoor wood boards, tiles and elements",
+      ar: "ألواح ودالات وعناصر خشبية خارجية",
+    },
+    title: { fr: "Terrasses & extérieur", en: "Decking and outdoor", ar: "التراسات والخارج" },
+    text: {
+      fr: "Produits bois pour terrasses, bardages, pergolas, clôtures et projets extérieurs à étudier selon exposition, essence et conditionnement.",
+      en: "Wood products for decking, cladding, pergolas, fences and outdoor projects reviewed by exposure, species and packing.",
+      ar: "منتجات خشبية للتراسات والكسوة والبرجولات والأسوار والمشاريع الخارجية حسب التعرض ونوع الخشب والتغليف.",
+    },
+    products: {
+      fr: ["Lames de terrasse", "Dalles de terrasse", "Bardages", "Pergolas", "Clôtures"],
+      en: ["Decking boards", "Decking tiles", "Cladding", "Pergolas", "Fences"],
+      ar: ["ألواح تراس", "دالات تراس", "كسوة", "برجولات", "أسوار"],
+    },
+    routeKeys: [],
+  },
   {
     id: "pallets-packaging",
     image: "/assets/tunibois/wooden-pallets-main.png",
@@ -25,23 +138,39 @@ export const productFamilies: ProductFamily[] = [
       en: "Wooden pallets and packaging for industrial flows",
       ar: "منصات وتغليف خشبي للتدفقات الصناعية",
     },
-    title: { fr: "Palettes et emballages industriels", en: "Industrial pallets and packaging", ar: "منصات وتغليف صناعي" },
+    title: { fr: "Palettes & emballages", en: "Pallets and packaging", ar: "منصات وتغليف" },
     text: {
-      fr: "Formats adaptés au stockage, à la manutention, au transport routier ou maritime et aux contraintes de charge.",
-      en: "Formats adapted to storage, handling, road or sea transport and load constraints.",
-      ar: "مقاسات مناسبة للتخزين والمناولة والنقل البري أو البحري ومتطلبات الحمولة.",
+      fr: "Solutions bois pour stockage, manutention, transport routier ou maritime, export et besoins industriels réguliers.",
+      en: "Wood solutions for storage, handling, road or sea transport, export and recurring industrial needs.",
+      ar: "حلول خشبية للتخزين والمناولة والنقل البري أو البحري والتصدير والاحتياجات الصناعية المنتظمة.",
     },
-    proof: {
-      fr: "À étudier selon charge, dimensions, essence, humidité, marquage, empilage et destination.",
-      en: "Reviewed by load, dimensions, species, moisture, marking, stacking and destination.",
-      ar: "تدرس حسب الحمولة والأبعاد ونوع الخشب والرطوبة والوسم والتكديس والوجهة.",
-    },
-    examples: {
-      fr: ["Palettes export", "Euro palettes", "Palettes industrielles", "Caisses et emballages bois"],
-      en: ["Export pallets", "Euro pallets", "Industrial pallets", "Wooden crates and packaging"],
-      ar: ["منصات تصدير", "منصات أوروبية", "منصات صناعية", "صناديق وتغليف خشبي"],
+    products: {
+      fr: ["Euro palettes", "Palettes export", "Palettes industrielles", "Réparation palettes", "Caisses industrielles"],
+      en: ["Euro pallets", "Export pallets", "Industrial pallets", "Pallet repair", "Industrial crates"],
+      ar: ["منصات أوروبية", "منصات تصدير", "منصات صناعية", "إصلاح المنصات", "صناديق صناعية"],
     },
     routeKeys: ["pallets"],
+  },
+  {
+    id: "olive-wood",
+    image: "/assets/hardydeck/wood-boards-teck.jpg",
+    imageAlt: {
+      fr: "Bois premium pour collection olivier",
+      en: "Premium wood for olive wood collection",
+      ar: "خشب فاخر لمجموعة الزيتون",
+    },
+    title: { fr: "Collection olivier", en: "Olive wood collection", ar: "مجموعة خشب الزيتون" },
+    text: {
+      fr: "Produits premium en bois d'olivier pour distributeurs, boutiques, cadeaux d'affaires, décoration et articles de présentation.",
+      en: "Premium olive wood products for distributors, stores, corporate gifts, decoration and presentation items.",
+      ar: "منتجات فاخرة من خشب الزيتون للموزعين والمتاجر والهدايا المهنية والديكور ومنتجات التقديم.",
+    },
+    products: {
+      fr: ["Planches à découper", "Plateaux de présentation", "Produits premium", "Décoration"],
+      en: ["Cutting boards", "Presentation boards", "Premium products", "Decoration"],
+      ar: ["ألواح تقطيع", "صحون تقديم", "منتجات فاخرة", "ديكور"],
+    },
+    routeKeys: [],
   },
   {
     id: "eco-wood",
@@ -51,101 +180,39 @@ export const productFamilies: ProductFamily[] = [
       en: "Eco wood products for professional distribution",
       ar: "منتجات eco wood للتوزيع المهني",
     },
-    title: { fr: "Produits eco wood pour distribution", en: "Eco wood products for distribution", ar: "منتجات خشبية صديقة للتوزيع" },
+    title: { fr: "Eco wood products", en: "Eco wood products", ar: "منتجات Eco Wood" },
     text: {
-      fr: "Produits légers, répétables et conditionnables pour distributeurs, marques privées, CHR et circuits professionnels.",
-      en: "Lightweight, repeatable and packable products for distributors, private labels, foodservice and professional channels.",
-      ar: "منتجات خفيفة وقابلة للتكرار والتغليف للموزعين والعلامات الخاصة والمطاعم والقنوات المهنية.",
+      fr: "Produits bois légers pour CHR, distribution, marques privées, grossistes et circuits professionnels.",
+      en: "Lightweight wood products for foodservice, distribution, private labels, wholesalers and professional channels.",
+      ar: "منتجات خشبية خفيفة للمطاعم والتوزيع والعلامات الخاصة وتجار الجملة والقنوات المهنية.",
     },
-    proof: {
-      fr: "À préciser selon format, finition, contact alimentaire, emballage, marque distributeur et volume.",
-      en: "Specified by format, finish, food contact, packing, private label and volume.",
-      ar: "تحدد حسب المقاس والتشطيب وملامسة الغذاء والتغليف والعلامة الخاصة والكمية.",
+    products: {
+      fr: ["Agitateurs café", "Bâtonnets glace", "Cure-dents", "Brochettes", "Couverts bois"],
+      en: ["Coffee stirrers", "Ice cream sticks", "Toothpicks", "Skewers", "Wooden cutlery"],
+      ar: ["محركات قهوة", "عيدان مثلجات", "أعواد أسنان", "أسياخ", "أدوات مائدة خشبية"],
     },
-    examples: {
-      fr: ["Agitateurs café", "Bâtonnets glace", "Couverts bois", "Cure-dents"],
-      en: ["Coffee stirrers", "Ice cream sticks", "Wooden cutlery", "Toothpicks"],
-      ar: ["محركات قهوة", "عيدان مثلجات", "أدوات مائدة خشبية", "أعواد أسنان"],
-    },
-    routeKeys: ["stirrers", "iceCreamSticks", "woodenCutlery", "toothpicks"],
+    routeKeys: ["stirrers", "iceCreamSticks", "toothpicks", "woodenCutlery"],
   },
   {
     id: "wood-energy",
     image: "/assets/piskorski/pellets-bags.jpg",
     imageAlt: {
-      fr: "Pellets et bois énergie conditionnés sur palette",
-      en: "Palletized pellets and wood energy products",
-      ar: "حبيبات وطاقة خشبية على منصات",
+      fr: "Pellets et briquettes bois énergie",
+      en: "Wood pellets and briquettes",
+      ar: "حبيبات وقوالب طاقة خشبية",
     },
-    title: { fr: "Bois énergie et valorisation matière", en: "Wood energy and material valorization", ar: "طاقة خشبية وتثمين المادة" },
+    title: { fr: "Wood energy", en: "Wood energy", ar: "طاقة الخشب" },
     text: {
-      fr: "Formats bois énergie à confirmer selon disponibilité matière, humidité, pouvoir calorifique, sacs, palettes et volumes.",
-      en: "Wood energy formats confirmed by material availability, moisture, calorific value, bags, pallets and volumes.",
-      ar: "صيغ طاقة خشبية تؤكد حسب توفر المادة والرطوبة والقيمة الحرارية والأكياس والمنصات والكميات.",
+      fr: "Formats bois énergie pour revendeurs, distributeurs et clients professionnels selon disponibilité matière, conditionnement et volumes.",
+      en: "Wood energy formats for resellers, distributors and professional customers according to material availability, packing and volumes.",
+      ar: "صيغ طاقة خشبية للموزعين والعملاء المهنيين حسب توفر المادة والتغليف والكميات.",
     },
-    proof: {
-      fr: "À étudier selon lot, humidité, conditionnement, palette, volume et circuit de distribution.",
-      en: "Reviewed by batch, moisture, packing, palletization, volume and distribution channel.",
-      ar: "تدرس حسب الدفعة والرطوبة والتغليف والمنصة والكمية وقناة التوزيع.",
-    },
-    examples: {
-      fr: ["Pellets", "Briquettes", "Conditionnement palette", "Volumes selon disponibilité"],
-      en: ["Pellets", "Briquettes", "Palletized packing", "Volumes by availability"],
-      ar: ["حبيبات", "قوالب خشبية", "تغليف على منصات", "كميات حسب التوفر"],
+    products: {
+      fr: ["Pellets", "Briquettes"],
+      en: ["Pellets", "Briquettes"],
+      ar: ["حبيبات", "قوالب خشبية"],
     },
     routeKeys: ["pellets"],
-  },
-  {
-    id: "components-panels",
-    image: "/assets/hardydeck/wood-boards-teck.jpg",
-    imageAlt: {
-      fr: "Planches et composants bois rabotés",
-      en: "Planed boards and wood components",
-      ar: "ألواح ومكونات خشبية ممسوحة",
-    },
-    title: { fr: "Panneaux, composants et pièces sur plan", en: "Panels, components and made-to-plan parts", ar: "ألواح ومكونات وقطع حسب الرسم" },
-    text: {
-      fr: "Dimensions, épaisseurs, sections, usinage, collage et répétabilité étudiés pour fabricants et industriels.",
-      en: "Dimensions, thicknesses, sections, machining, gluing and repeatability reviewed for manufacturers and industrial buyers.",
-      ar: "أبعاد وسماكات ومقاطع وتشغيل ولصق وتكرار تتم دراستها للمصنعين والمشترين الصناعيين.",
-    },
-    proof: {
-      fr: "À préciser avec plans, épaisseurs, tolérances, essence, taux d'humidité et niveau de finition.",
-      en: "Specified with drawings, thicknesses, tolerances, species, moisture rate and finish level.",
-      ar: "تحدد بالرسومات والسماكات والتفاوتات ونوع الخشب ونسبة الرطوبة ومستوى التشطيب.",
-    },
-    examples: {
-      fr: ["Panneaux collés", "Finger joint panels", "Pieds et traverses", "Pièces tournées ou usinées"],
-      en: ["Edge glued panels", "Finger joint panels", "Legs and rails", "Turned or machined parts"],
-      ar: ["ألواح ملصقة", "ألواح finger joint", "أرجل وعوارض", "قطع مخروطة أو مشغلة"],
-    },
-    routeKeys: [],
-  },
-  {
-    id: "outdoor-architecture",
-    image: "/assets/hardydeck/outdoor-wood-tiles.jpg",
-    imageAlt: {
-      fr: "Dalles, lames et éléments bois pour extérieur",
-      en: "Outdoor wood tiles, boards and elements",
-      ar: "دالات وألواح وعناصر خشبية خارجية",
-    },
-    title: { fr: "Extérieur et éléments architecturaux", en: "Outdoor and architectural wood elements", ar: "عناصر خارجية ومعمارية خشبية" },
-    text: {
-      fr: "Lames, bardages, claustras et habillages étudiés selon essence, exposition, usage, finition et conditionnement.",
-      en: "Boards, cladding, screens and coverings reviewed by species, exposure, use, finish and packing.",
-      ar: "ألواح وكسوة وفواصل وتلبيسات تدرس حسب نوع الخشب والتعرض والاستخدام والتشطيب والتغليف.",
-    },
-    proof: {
-      fr: "À valider selon exposition, stabilité, essence, finition, entraxes, emballage et usage final.",
-      en: "Validated by exposure, stability, species, finish, spacing, packing and final use.",
-      ar: "تؤكد حسب التعرض والثبات ونوع الخشب والتشطيب والمسافات والتغليف والاستخدام النهائي.",
-    },
-    examples: {
-      fr: ["Lames de terrasse", "Bardage", "Claustras", "Revêtements et décoration"],
-      en: ["Decking boards", "Cladding", "Screens", "Coverings and decoration"],
-      ar: ["ألواح تراس", "كسوة", "فواصل", "تلبيسات وديكور"],
-    },
-    routeKeys: [],
   },
 ];
 
