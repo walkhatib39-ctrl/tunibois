@@ -8,7 +8,8 @@ type HomeFaqSectionProps = {
 };
 
 export function HomeFaqSection({ locale }: HomeFaqSectionProps) {
-  const title = locale === "fr" ? "Questions fréquentes des acheteurs B2B" : locale === "en" ? "Frequently asked B2B buyer questions" : "أسئلة متكررة للمشترين المهنيين";
+  const title =
+    locale === "fr" ? "Questions des acheteurs industriels et export" : locale === "en" ? "Industrial and export buyer questions" : "أسئلة المشترين الصناعيين والمصدرين";
 
   return (
     <section className="py-20">

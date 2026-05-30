@@ -2,8 +2,8 @@ import { HomePage } from "@/components/pages/site-pages";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Tunibois | Solutions industrielles de transformation du bois et export",
-  description: "Tunibois transforme, fabrique et exporte des solutions bois pour industriels, distributeurs et importateurs internationaux.",
+  title: "Tunibois | Produits bois transformés en Tunisie pour l'industrie et l'export",
+  description: "Palettes, emballages, panneaux, composants, produits eco wood et bois énergie préparés selon dimensions, volumes, conditionnement et destination.",
   routeKey: "home",
   image: "/assets/tunibois/hero-industrial-wood.jpg",
 });

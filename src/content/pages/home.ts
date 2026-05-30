@@ -8,72 +8,72 @@ export type HomeOfferGroupId = "components-panels" | "eco-wood" | "outdoor-archi
 export const homeCopy = {
   hero: {
     fr: {
-      title: "Transformation industrielle du bois pour acheteurs B2B et marchés export",
-      text: "Tunibois accompagne les importateurs, distributeurs et industriels qui recherchent des produits bois transformés, spécifiés, contrôlés et préparés pour l'export depuis la Tunisie.",
-      quote: "Demander un devis export",
+      title: "Produits bois transformés en Tunisie pour l'industrie et l'export",
+      text: "Palettes, emballages, panneaux, composants, produits eco wood et bois énergie préparés selon vos dimensions, volumes, conditionnements et destinations.",
+      quote: "Demander une offre export",
       catalogue: "Recevoir le catalogue",
     },
     en: {
-      title: "Industrial wood transformation for B2B buyers and export markets",
-      text: "Tunibois supports importers, distributors and manufacturers looking for transformed wood products specified, controlled and prepared for export from Tunisia.",
-      quote: "Request an export quote",
+      title: "Wood products transformed in Tunisia for industry and export",
+      text: "Pallets, packaging, panels, components, eco wood products and wood energy prepared to your dimensions, volumes, packing requirements and destinations.",
+      quote: "Request an export offer",
       catalogue: "Request the catalogue",
     },
     ar: {
-      title: "تحويل صناعي للخشب للمشترين المهنيين وأسواق التصدير",
-      text: "تدعم Tunibois المستوردين والموزعين والصناعيين الباحثين عن منتجات خشبية محولة ومحددة ومراقبة ومجهزة للتصدير من تونس.",
+      title: "منتجات خشبية محولة في تونس للصناعة والتصدير",
+      text: "منصات وتغليف وألواح ومكونات ومنتجات eco wood وطاقة خشبية حسب الأبعاد والكميات والتغليف والوجهات المطلوبة.",
       quote: "طلب عرض تصدير",
       catalogue: "طلب الكتالوج",
     },
   },
   shared: {
     fr: {
-      products: "Solutions bois pour achats industriels et export",
-      factory: "Capacités de transformation et préparation export",
-      exportMarkets: "Exporter avec une base claire, pas avec une simple liste de pays",
-      formTitle: "Envoyer une demande qualifiée",
-      formText: "Indiquez le produit, les dimensions, la quantité, le pays de destination, le conditionnement souhaité et toute contrainte technique. Cela permet de vous répondre avec une base exploitable.",
+      products: "Gammes bois pour importateurs, distributeurs et industriels",
+      factory: "Transformation, contrôle et préparation export",
+      exportMarkets: "Documents, conditionnement et délais export",
+      formTitle: "Recevoir une réponse commerciale claire",
+      formText: "Envoyez le produit, les dimensions, la quantité, le pays de destination, le conditionnement attendu et vos contraintes techniques. Tunibois confirme la faisabilité, les informations manquantes, le délai estimatif et la prochaine étape commerciale.",
     },
     en: {
-      products: "Wood solutions for industrial and export purchasing",
-      factory: "Transformation and export preparation capabilities",
-      exportMarkets: "Export with a clear basis, not a simple country list",
-      formTitle: "Send a qualified request",
-      formText: "Share product, dimensions, quantity, destination country, expected packing and any technical constraints. This helps us reply with a workable basis.",
+      products: "Wood ranges for importers, distributors and manufacturers",
+      factory: "Transformation, control and export preparation",
+      exportMarkets: "Export orders ready for documentation",
+      formTitle: "Receive a clear commercial answer",
+      formText: "Send product, dimensions, quantity, destination country, expected packing and technical constraints. Tunibois confirms feasibility, missing information, estimated lead time and the next commercial step.",
     },
     ar: {
-      products: "حلول خشبية للمشتريات الصناعية والتصدير",
-      factory: "قدرات التحويل والتحضير للتصدير",
-      exportMarkets: "تصدير على أساس واضح وليس مجرد قائمة بلدان",
-      formTitle: "إرسال طلب واضح",
-      formText: "اذكر المنتج والأبعاد والكمية وبلد الوجهة والتغليف المطلوب وأي متطلبات تقنية حتى يكون الرد قابلا للاستخدام.",
+      products: "تشكيلات خشبية للمستوردين والموزعين والصناعيين",
+      factory: "تحويل ومراقبة وتحضير للتصدير",
+      exportMarkets: "طلبات تصدير جاهزة للتوثيق",
+      formTitle: "الحصول على رد تجاري قابل للاستخدام",
+      formText: "أرسل المنتج والأبعاد والكمية وبلد الوجهة والتغليف المطلوب والمتطلبات التقنية. تؤكد Tunibois الجدوى والمعلومات الناقصة والآجال التقديرية والخطوة التجارية التالية.",
     },
   },
 };
 
 export const trustRail = [
-  { fr: "Cahier des charges B2B", en: "B2B specifications", ar: "دفتر شروط مهني" },
-  { fr: "Transformation bois", en: "Wood transformation", ar: "تحويل الخشب" },
-  { fr: "Produits sur mesure", en: "Custom products", ar: "منتجات حسب الطلب" },
+  { fr: "Palettes et emballages", en: "Pallets and packaging", ar: "منصات وتغليف" },
+  { fr: "Panneaux et composants", en: "Panels and components", ar: "ألواح ومكونات" },
+  { fr: "Produits eco wood", en: "Eco wood products", ar: "منتجات eco wood" },
   { fr: "Contrôle et conditionnement", en: "Control and packing", ar: "مراقبة وتغليف" },
-  { fr: "Préparation export", en: "Export preparation", ar: "تحضير للتصدير" },
+  { fr: "Documents export", en: "Export documents", ar: "وثائق تصدير" },
 ] satisfies Array<LocalizedText>;
 
 export const buyerPositioning = {
   title: {
-    fr: "Pensé pour les acheteurs qui doivent sécuriser un fournisseur industriel",
-    en: "Built for buyers who need to secure an industrial supplier",
-    ar: "موجه للمشترين الذين يحتاجون إلى تأمين مورد صناعي",
+    fr: "Des réponses sérieuses pour des achats bois exigeants",
+    en: "Serious answers for demanding wood purchasing",
+    ar: "إجابات جدية لمشتريات خشب دقيقة",
   },
   intro: {
-    fr: "Un acheteur B2B ne cherche pas seulement une photo de produit. Il veut comprendre si le fournisseur sait lire une demande, adapter la matière, respecter des dimensions, préparer un conditionnement et répondre sur les contraintes export.",
-    en: "A B2B buyer is not only looking for a product photo. They need to know whether the supplier can read a request, adapt material, respect dimensions, prepare packing and answer export constraints.",
-    ar: "المشتري المهني لا يبحث عن صورة منتج فقط. يحتاج إلى معرفة قدرة المورد على فهم الطلب وتكييف المادة واحترام الأبعاد وتحضير التغليف ومتطلبات التصدير.",
+    fr: "Tunibois vérifie les points qui comptent avant production: essence, dimensions, tolérances, finition, quantité, emballage, transport et documents export.",
+    en: "Tunibois reviews the points that matter before production: species, dimensions, tolerances, finish, quantity, packing, transport and export documents.",
+    ar: "تراجع Tunibois النقاط المهمة قبل الإنتاج: نوع الخشب والأبعاد والتفاوتات والتشطيب والكمية والتغليف والنقل ووثائق التصدير.",
   },
   body: {
-    fr: "L'accueil doit donc positionner Tunibois comme un partenaire de transformation: dialogue technique, fabrication selon besoin, contrôle, documentation et accompagnement commercial. Chaque section rapproche le visiteur d'une demande de devis exploitable.",
-    en: "The homepage therefore positions Tunibois as a transformation partner: technical dialogue, need-based manufacturing, control, documentation and commercial support. Each section moves the visitor toward a usable quote request.",
-    ar: "لذلك تقدم الصفحة الرئيسية Tunibois كشريك تحويل: حوار تقني وتصنيع حسب الحاجة ومراقبة ووثائق ومرافقة تجارية. كل قسم يقرب الزائر من طلب عرض قابل للمعالجة.",
+    fr: "À partir de votre cahier des charges, l'équipe confirme ce qui est faisable, ce qui doit être précisé et ce qui impacte le prix, le délai ou le conditionnement.",
+    en: "From your specifications, the team confirms what is feasible, what needs clarification and what affects price, lead time or packing.",
+    ar: "انطلاقا من دفتر الشروط، يؤكد الفريق ما هو قابل للتنفيذ وما يحتاج إلى توضيح وما يؤثر على السعر أو الآجال أو التغليف.",
   },
 };
 
@@ -81,25 +81,25 @@ export const buyerSegments = [
   {
     title: { fr: "Importateurs", en: "Importers", ar: "المستوردون" },
     text: {
-      fr: "Ils veulent des produits exportables, une documentation claire, un conditionnement maîtrisé et un interlocuteur capable de qualifier une demande avant expédition.",
-      en: "They need export-ready products, clear documentation, controlled packing and a contact able to qualify a request before shipment.",
-      ar: "يحتاجون إلى منتجات جاهزة للتصدير ووثائق واضحة وتغليف مضبوط ومخاطب قادر على تأهيل الطلب قبل الشحن.",
+      fr: "Produits prêts à expédier, documents commerciaux, conditionnement stable et échanges clairs avant chargement.",
+      en: "Products ready to ship, commercial documents, stable packing and clear exchanges before loading.",
+      ar: "منتجات جاهزة للشحن ووثائق تجارية وتغليف ثابت وتبادل واضح قبل التحميل.",
     },
   },
   {
     title: { fr: "Distributeurs", en: "Distributors", ar: "الموزعون" },
     text: {
-      fr: "Ils recherchent des gammes cohérentes, des variantes, un emballage adapté au circuit de vente et des volumes à organiser selon marché.",
-      en: "They look for coherent ranges, variants, packing adapted to the sales channel and volumes organized by market.",
-      ar: "يبحثون عن تشكيلات واضحة ومتغيرات وتغليف مناسب لقناة البيع وكميات تنظم حسب السوق.",
+      fr: "Gammes lisibles, variantes, conditionnements adaptés aux circuits de vente et volumes organisés par marché.",
+      en: "Clear ranges, variants, packing adapted to sales channels and volumes organized by market.",
+      ar: "تشكيلات واضحة ومتغيرات وتغليف مناسب لقنوات البيع وكميات منظمة حسب السوق.",
     },
   },
   {
     title: { fr: "Industriels", en: "Manufacturers", ar: "الصناعيون" },
     text: {
-      fr: "Ils doivent intégrer des composants, panneaux, pièces ou emballages dans une chaîne de production avec dimensions, tolérances et délais cohérents.",
-      en: "They need to integrate components, panels, parts or packaging into production flows with coherent dimensions, tolerances and lead times.",
-      ar: "يحتاجون إلى إدماج مكونات أو ألواح أو قطع أو تغليف في تدفقات إنتاج بأبعاد وتفاوتات وآجال واضحة.",
+      fr: "Composants, panneaux, pièces ou emballages intégrables à une chaîne de production avec dimensions, tolérances et délais cohérents.",
+      en: "Components, panels, parts or packaging that fit production flows with coherent dimensions, tolerances and lead times.",
+      ar: "مكونات أو ألواح أو قطع أو تغليف قابل للإدماج في الإنتاج بأبعاد وتفاوتات وآجال واضحة.",
     },
   },
 ];
@@ -110,9 +110,9 @@ export const homeOfferGroups = [
     routeKey: "pallets",
     title: { fr: "Palettes et emballages industriels", en: "Industrial pallets and packaging", ar: "منصات وتغليف صناعي" },
     text: {
-      fr: "Pour les flux logistiques, l'export, le stockage et les besoins industriels où la charge, le format et le conditionnement comptent.",
-      en: "For logistics flows, export, storage and industrial needs where load, format and packing matter.",
-      ar: "للتدفقات اللوجستية والتصدير والتخزين والاحتياجات الصناعية حيث تهم الحمولة والمقاس والتغليف.",
+      fr: "Formats adaptés au stockage, à la manutention, au transport routier ou maritime et aux contraintes de charge.",
+      en: "Formats adapted to storage, handling, road or sea transport and load constraints.",
+      ar: "مقاسات مناسبة للتخزين والمناولة والنقل البري أو البحري ومتطلبات الحمولة.",
     },
     examples: {
       fr: ["Palettes export", "Euro palettes", "Palettes industrielles", "Caisses et emballages bois"],
@@ -125,9 +125,9 @@ export const homeOfferGroups = [
     routeKey: "stirrers",
     title: { fr: "Produits eco wood pour distribution", en: "Eco wood products for distribution", ar: "منتجات خشبية صديقة للتوزيع" },
     text: {
-      fr: "Pour distributeurs, CHR, marques privées et acheteurs qui veulent des produits simples mais réguliers en finition et conditionnement.",
-      en: "For distributors, foodservice, private labels and buyers needing simple products with consistent finish and packing.",
-      ar: "للموزعين والمطاعم والعلامات الخاصة والمشترين الذين يريدون منتجات بسيطة لكنها منتظمة في التشطيب والتغليف.",
+      fr: "Produits légers, répétables et conditionnables pour distributeurs, marques privées, CHR et circuits professionnels.",
+      en: "Lightweight, repeatable and packable products for distributors, private labels, foodservice and professional channels.",
+      ar: "منتجات خفيفة وقابلة للتكرار والتغليف للموزعين والعلامات الخاصة والمطاعم والقنوات المهنية.",
     },
     examples: {
       fr: ["Agitateurs café", "Bâtonnets glace", "Couverts bois", "Cure-dents"],
@@ -140,9 +140,9 @@ export const homeOfferGroups = [
     routeKey: "pellets",
     title: { fr: "Bois énergie et valorisation matière", en: "Wood energy and material valorization", ar: "طاقة خشبية وتثمين المادة" },
     text: {
-      fr: "Pour revendeurs énergie, circuits professionnels et clients cherchant des formats bois énergie à qualifier selon disponibilité et conditionnement.",
-      en: "For energy resellers, professional channels and customers looking for wood energy formats to qualify by availability and packing.",
-      ar: "لموزعي الطاقة والقنوات المهنية والعملاء الباحثين عن صيغ طاقة خشبية حسب التوفر والتغليف.",
+      fr: "Formats bois énergie à confirmer selon disponibilité matière, humidité, pouvoir calorifique, sacs, palettes et volumes.",
+      en: "Wood energy formats confirmed by material availability, moisture, calorific value, bags, pallets and volumes.",
+      ar: "صيغ طاقة خشبية تؤكد حسب توفر المادة والرطوبة والقيمة الحرارية والأكياس والمنصات والكميات.",
     },
     examples: {
       fr: ["Pellets", "Briquettes", "Conditionnement palette", "Volumes selon disponibilité"],
@@ -155,9 +155,9 @@ export const homeOfferGroups = [
     routeKey: "products",
     title: { fr: "Panneaux, composants et pièces sur plan", en: "Panels, components and made-to-plan parts", ar: "ألواح ومكونات وقطع حسب الرسم" },
     text: {
-      fr: "Pour fabricants de mobilier, agenceurs et industriels qui veulent discuter dimensions, épaisseurs, sections, usinage et répétabilité.",
-      en: "For furniture manufacturers, fit-out companies and industrial buyers discussing dimensions, thicknesses, sections, machining and repeatability.",
-      ar: "لمصنعي الأثاث وشركات التجهيز والمشترين الصناعيين الذين يناقشون الأبعاد والسماكات والمقاطع والتشغيل والتكرار.",
+      fr: "Dimensions, épaisseurs, sections, usinage, collage et répétabilité étudiés pour fabricants et industriels.",
+      en: "Dimensions, thicknesses, sections, machining, gluing and repeatability reviewed for manufacturers and industrial buyers.",
+      ar: "أبعاد وسماكات ومقاطع وتشغيل ولصق وتكرار تتم دراستها للمصنعين والمشترين الصناعيين.",
     },
     examples: {
       fr: ["Panneaux collés", "Finger joint panels", "Pieds et traverses", "Pièces tournées ou usinées"],
@@ -170,9 +170,9 @@ export const homeOfferGroups = [
     routeKey: "products",
     title: { fr: "Extérieur et éléments architecturaux", en: "Outdoor and architectural wood elements", ar: "عناصر خارجية ومعمارية خشبية" },
     text: {
-      fr: "Pour projets de terrasses, bardages, claustras, habillages et éléments décoratifs à étudier selon essence, usage et exposition.",
-      en: "For decking, cladding, screens, wall/ceiling coverings and decorative elements to study by species, use and exposure.",
-      ar: "لمشاريع التراسات والكسوة والفواصل والديكور التي تدرس حسب نوع الخشب والاستخدام والتعرض.",
+      fr: "Lames, bardages, claustras et habillages étudiés selon essence, exposition, usage, finition et conditionnement.",
+      en: "Boards, cladding, screens and coverings reviewed by species, exposure, use, finish and packing.",
+      ar: "ألواح وكسوة وفواصل وتلبيسات تدرس حسب نوع الخشب والتعرض والاستخدام والتشطيب والتغليف.",
     },
     examples: {
       fr: ["Lames de terrasse", "Bardage", "Claustras", "Revêtements et décoration"],
@@ -190,7 +190,7 @@ export const homeOfferGroups = [
 
 export const industrialProcess = [
   {
-    title: { fr: "Demande qualifiée", en: "Qualified request", ar: "طلب مؤهل" },
+    title: { fr: "Brief technique", en: "Technical brief", ar: "ملف تقني" },
     text: {
       fr: "Produit, usage, destination, dimensions, quantité, niveau de finition, contraintes de charge ou de ligne de conditionnement.",
       en: "Product, use case, destination, dimensions, quantity, finish level, load constraints or packing line constraints.",
@@ -198,7 +198,7 @@ export const industrialProcess = [
     },
   },
   {
-    title: { fr: "Étude matière et faisabilité", en: "Material and feasibility review", ar: "دراسة المادة والجدوى" },
+    title: { fr: "Validation matière", en: "Material validation", ar: "تأكيد المادة" },
     text: {
       fr: "Choix de l'essence, disponibilité, humidité, sections, tolérances et adaptation au cahier des charges client.",
       en: "Species choice, availability, moisture, sections, tolerances and adaptation to customer specifications.",
@@ -206,7 +206,7 @@ export const industrialProcess = [
     },
   },
   {
-    title: { fr: "Transformation et contrôle", en: "Transformation and control", ar: "التحويل والمراقبة" },
+    title: { fr: "Production contrôlée", en: "Controlled production", ar: "إنتاج مراقب" },
     text: {
       fr: "Sciage, préparation, usinage, assemblage ou conditionnement avec points de contrôle adaptés au produit demandé.",
       en: "Sawing, preparation, machining, assembly or packing with control points adapted to the requested product.",
@@ -214,7 +214,7 @@ export const industrialProcess = [
     },
   },
   {
-    title: { fr: "Préparation commerciale export", en: "Commercial export preparation", ar: "تحضير تجاري للتصدير" },
+    title: { fr: "Offre et préparation export", en: "Offer and export preparation", ar: "عرض وتحضير تصدير" },
     text: {
       fr: "Devis, base technique, conditionnement, documents disponibles, délais à confirmer et prochaines étapes commerciales.",
       en: "Quote, technical basis, packing, available documents, lead times to confirm and next commercial steps.",
@@ -224,21 +224,21 @@ export const industrialProcess = [
 ];
 
 export const industrialProcessIntro = {
-  fr: "Cette méthode répond à l'objection la plus importante: est-ce que le fournisseur sait transformer une demande floue en base industrielle et commerciale exploitable ?",
-  en: "This method answers the key objection: can the supplier turn an unclear request into a usable industrial and commercial basis?",
-  ar: "تجيب هذه الطريقة على أهم اعتراض: هل يستطيع المورد تحويل طلب غير واضح إلى أساس صناعي وتجاري قابل للاستخدام؟",
+  fr: "Avant de chiffrer, Tunibois vérifie la matière, les formats, les tolérances, le conditionnement, les documents nécessaires et les points qui peuvent bloquer une expédition.",
+  en: "Before pricing, Tunibois reviews material, formats, tolerances, packing, required documents and points that could block a shipment.",
+  ar: "قبل التسعير تراجع Tunibois المادة والمقاسات والتفاوتات والتغليف والوثائق المطلوبة والنقاط التي قد تعطل الشحن.",
 };
 
 export const capabilitiesIntro = {
-  fr: "L'objectif n'est pas d'afficher une usine abstraite. Il faut montrer les capacités qui comptent dans une décision d'achat: matière, transformation, contrôle, conditionnement et export.",
-  en: "The goal is not to display an abstract factory. The page highlights the capabilities that matter in a purchasing decision: material, transformation, control, packing and export.",
-  ar: "الهدف ليس عرض مصنع بشكل عام، بل إبراز القدرات المهمة في قرار الشراء: المادة والتحويل والمراقبة والتغليف والتصدير.",
+  fr: "Disponibilité matière, régularité, contrôle, conditionnement et préparation export sont vérifiés avec la même exigence que le produit demandé.",
+  en: "Material availability, consistency, control, packing and export preparation are reviewed with the same discipline as the requested product.",
+  ar: "يتم التحقق من توفر المادة والانتظام والمراقبة والتغليف والتحضير للتصدير بنفس دقة المنتج المطلوب.",
 };
 
 export const exportReadinessIntro = {
-  fr: "Un acheteur international veut savoir comment sa commande sera préparée, documentée et suivie. La géographie vient ensuite; la crédibilité commence par le process.",
-  en: "An international buyer wants to know how the order will be prepared, documented and followed. Geography comes next; credibility starts with process.",
-  ar: "يريد المشتري الدولي معرفة كيف سيتم تحضير الطلب وتوثيقه ومتابعته. تأتي الجغرافيا بعد ذلك؛ المصداقية تبدأ من العملية.",
+  fr: "Pour l'international, Tunibois prépare les informations commerciales indispensables: documents, marquage, lots, emballage, délais confirmés et coordination transport.",
+  en: "For international orders, Tunibois prepares the commercial information that matters: documents, marking, batches, packing, confirmed lead times and transport coordination.",
+  ar: "للطلبات الدولية تحضر Tunibois المعلومات التجارية الأساسية: الوثائق والوسم والدُفعات والتغليف والآجال المؤكدة والتنسيق مع النقل.",
 };
 
 export const exportPillars = [
@@ -259,19 +259,19 @@ export const exportPillars = [
     },
   },
   {
-    title: { fr: "Zones commerciales", en: "Commercial regions", ar: "المناطق التجارية" },
+    title: { fr: "Marchés adressés", en: "Commercial regions", ar: "المناطق التجارية" },
     text: {
-      fr: "Approche Europe, Afrique et Moyen-Orient avec une qualification par produit, réglementation, volume et faisabilité.",
-      en: "Europe, Africa and Middle East approach qualified by product, regulation, volume and feasibility.",
+      fr: "Europe, Afrique et Moyen-Orient: chaque demande est étudiée selon produit, réglementation, volume et faisabilité.",
+      en: "Europe, Africa and Middle East requests are reviewed by product, regulation, volume and feasibility.",
       ar: "مقاربة أوروبا وأفريقيا والشرق الأوسط حسب المنتج والتنظيم والكمية والجدوى.",
     },
   },
 ];
 
 export const homeFaqIntro = {
-  fr: "Les questions ci-dessous répondent aux vraies hésitations d'un importateur, d'un distributeur ou d'un industriel avant de transmettre un cahier des charges.",
-  en: "The questions below answer the real hesitations of an importer, distributor or manufacturer before sharing a specification.",
-  ar: "تجيب الأسئلة التالية على ترددات المستورد أو الموزع أو الصناعي قبل إرسال دفتر الشروط.",
+  fr: "Avant une première commande, Tunibois peut confirmer la faisabilité, les échantillons possibles, les MOQ, les délais et les documents export à prévoir.",
+  en: "Before a first order, Tunibois can confirm feasibility, possible samples, MOQ, lead times and export documents to plan.",
+  ar: "قبل أول طلب يمكن لـ Tunibois تأكيد الجدوى والعينات الممكنة والحد الأدنى والآجال ووثائق التصدير المطلوبة.",
 };
 
 export const homeFaq = [
@@ -282,8 +282,8 @@ export const homeFaq = [
       ar: "ما المنتجات التي يمكن أن تدرسها Tunibois للتصدير؟",
     },
     a: {
-      fr: "Tunibois peut qualifier des demandes autour des palettes, emballages bois, produits eco wood, bois énergie, panneaux, composants et éléments bois sur mesure. La faisabilité dépend du cahier des charges, de la matière et du volume.",
-      en: "Tunibois can qualify requests around pallets, wooden packaging, eco wood products, wood energy, panels, components and custom wood elements. Feasibility depends on specification, material and volume.",
+      fr: "Tunibois étudie les palettes, emballages bois, produits eco wood, bois énergie, panneaux, composants et éléments bois sur mesure. La faisabilité dépend du cahier des charges, de la matière et du volume.",
+      en: "Tunibois reviews pallets, wooden packaging, eco wood products, wood energy, panels, components and custom wood elements. Feasibility depends on specification, material and volume.",
       ar: "يمكن لـ Tunibois دراسة طلبات المنصات والتغليف الخشبي والمنتجات الخشبية الصديقة والطاقة الخشبية والألواح والمكونات والعناصر حسب الطلب. تعتمد الجدوى على المواصفات والمادة والكمية.",
     },
   },
@@ -306,9 +306,9 @@ export const homeFaq = [
       ar: "هل العينات ممكنة قبل الطلب؟",
     },
     a: {
-      fr: "Une demande d'échantillon peut être étudiée selon le produit, le niveau de préparation nécessaire et le pays de destination. L'objectif est de valider matière, finition et conditionnement avant un volume plus important.",
-      en: "A sample request can be reviewed depending on the product, preparation level required and destination country. The goal is to validate material, finish and packing before larger volume.",
-      ar: "يمكن دراسة طلب العينة حسب المنتج ومستوى التحضير المطلوب وبلد الوجهة. الهدف هو تأكيد المادة والتشطيب والتغليف قبل كمية أكبر.",
+      fr: "Oui, selon le produit, le niveau de préparation nécessaire et le pays de destination. L'échantillon sert à valider la matière, la finition, les dimensions et le conditionnement avant un volume plus important.",
+      en: "Yes, depending on the product, preparation level required and destination country. The sample validates material, finish, dimensions and packing before larger volume.",
+      ar: "نعم حسب المنتج ومستوى التحضير المطلوب وبلد الوجهة. تساعد العينة على تأكيد المادة والتشطيب والأبعاد والتغليف قبل كمية أكبر.",
     },
   },
   {
@@ -318,9 +318,9 @@ export const homeFaq = [
       ar: "كيف يتم تحديد الحد الأدنى والآجال؟",
     },
     a: {
-      fr: "Ils ne doivent pas être annoncés de façon générique. MOQ et délais dépendent du produit, du format, du conditionnement, de la disponibilité matière et du niveau de personnalisation demandé.",
-      en: "They should not be announced generically. MOQ and lead times depend on product, format, packing, material availability and customization level.",
-      ar: "لا يجب إعلانها بشكل عام. تعتمد الحدود الدنيا والآجال على المنتج والمقاس والتغليف وتوفر المادة ومستوى التخصيص المطلوب.",
+      fr: "Tunibois confirme le MOQ et le délai après analyse du produit, du format, du conditionnement, de la disponibilité matière et du niveau de personnalisation demandé.",
+      en: "Tunibois confirms MOQ and lead time after reviewing product, format, packing, material availability and requested customization level.",
+      ar: "تؤكد Tunibois الحد الأدنى والآجال بعد دراسة المنتج والمقاس والتغليف وتوفر المادة ومستوى التخصيص المطلوب.",
     },
   },
   {

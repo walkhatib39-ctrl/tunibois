@@ -24,10 +24,10 @@ export function IndustrialOfferSection({ locale }: IndustrialOfferSectionProps) 
   const title = homeCopy.shared[locale].products;
   const intro =
     locale === "fr"
-      ? "Une seule lecture de l'offre: familles industrielles, applications B2B et exemples de produits. L'acheteur comprend rapidement si Tunibois peut étudier sa demande."
+      ? "Palettes, emballages, composants, panneaux, produits eco wood, bois énergie et éléments sur plan peuvent être étudiés selon vos dimensions, finitions, volumes et conditionnements."
       : locale === "en"
-        ? "One clear reading of the offer: industrial families, B2B applications and product examples. Buyers quickly understand whether Tunibois can review their request."
-        : "قراءة واحدة وواضحة للعرض: عائلات صناعية وتطبيقات مهنية وأمثلة منتجات. يفهم المشتري بسرعة هل يمكن دراسة طلبه.";
+        ? "Pallets, packaging, components, panels, eco wood products, wood energy and made-to-plan elements can be reviewed according to your dimensions, finishes, volumes and packing needs."
+        : "يمكن دراسة المنصات والتغليف والمكونات والألواح ومنتجات eco wood والطاقة الخشبية والعناصر حسب الرسم وفق الأبعاد والتشطيب والكميات والتغليف.";
 
   return (
     <section className="bg-surface py-20">
@@ -54,7 +54,7 @@ export function IndustrialOfferSection({ locale }: IndustrialOfferSectionProps) 
                 ))}
               </div>
               <Link href={route(group.routeKey, locale)} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-brand">
-                {locale === "fr" ? "Voir les possibilités" : locale === "en" ? "View possibilities" : "عرض الإمكانيات"}
+                {locale === "fr" ? "Voir les produits" : locale === "en" ? "View products" : "عرض المنتجات"}
                 <FontAwesomeIcon icon={faArrowRight} className="size-3" aria-hidden />
               </Link>
             </article>
