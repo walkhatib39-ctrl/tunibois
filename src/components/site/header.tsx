@@ -50,6 +50,23 @@ export function Header({ locale, routeKey }: HeaderProps) {
           </Button>
         </div>
       </Container>
+      <div className="border-t border-line lg:hidden">
+        <Container>
+          <nav className="flex items-center gap-2 overflow-x-auto py-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" aria-label="Navigation mobile">
+            {navigation.map((item) => (
+              <Link key={item.href} href={item.href} className="shrink-0 rounded-md border border-line bg-surface px-3 py-2 text-sm font-semibold text-brand">
+                {item.label}
+              </Link>
+            ))}
+            <Link href={route("contact", locale)} className="shrink-0 rounded-md border border-brand px-4 py-2 text-sm font-semibold text-brand">
+              RFQ
+            </Link>
+            <div className="shrink-0">
+              <LanguageSwitcher activeLocale={locale} routeKey={routeKey} />
+            </div>
+          </nav>
+        </Container>
+      </div>
     </header>
   );
 }
