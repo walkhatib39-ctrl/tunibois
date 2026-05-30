@@ -1,0 +1,64 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+enum LeadStatus {
+  new
+  contacted
+  qualified
+  closed
+}
+
+model QuoteRequest {
+  id           Int        @id @default(autoincrement())
+  status       LeadStatus @default(new)
+  name         String
+  company      String?
+  country      String
+  phone        String?
+  email        String
+  product      String
+  quantity     String?
+  message      String?    @db.Text
+  sourceLocale String     @default("fr")
+  sourcePath   String?
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+}
+
+model SampleRequest {
+  id              Int        @id @default(autoincrement())
+  status          LeadStatus @default(new)
+  name            String
+  company         String?
+  country         String
+  phone           String?
+  email           String
+  product         String
+  deliveryAddress String?    @db.Text
+  message         String?    @db.Text
+  sourceLocale    String     @default("fr")
+  sourcePath      String?
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+}
+
+model ContactMessage {
+  id           Int        @id @default(autoincrement())
+  status       LeadStatus @default(new)
+  name         String
+  company      String?
+  country      String?
+  phone        String?
+  email        String
+  subject      String?
+  message      String     @db.Text
+  sourceLocale String     @default("fr")
+  sourcePath   String?
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+}
