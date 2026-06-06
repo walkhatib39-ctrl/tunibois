@@ -76,8 +76,8 @@ function metadataByRoute(routeKey: RouteKey) {
       description: "Solutions bois, palettes, composants et produits eco wood préparés pour importateurs, distributeurs et industriels internationaux.",
     },
     contact: {
-      title: "Contact et demande de devis | Tunibois",
-      description: "Contactez Tunibois pour une demande de devis, d'échantillon ou une discussion export sur vos besoins bois.",
+      title: "Demande de devis bois, échantillon et contact export | Tunibois",
+      description: "Contactez Tunibois pour un devis bois B2B, une demande d'échantillon, un projet export, distribution ou fabrication industrielle.",
     },
     products: {
       title: "Produits bois B2B | Tunibois",

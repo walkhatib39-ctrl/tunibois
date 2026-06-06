@@ -77,8 +77,8 @@ function metadataByRoute(routeKey: RouteKey) {
       description: "Wood solutions, pallets, components and eco wood products prepared for importers, distributors and international manufacturers.",
     },
     contact: {
-      title: "Contact and quote request | Tunibois",
-      description: "Contact Tunibois for a quote, sample request or export discussion for your wood product needs.",
+      title: "Wood quote request, samples and export contact | Tunibois",
+      description: "Contact Tunibois for a B2B wood quote, sample request, export project, distribution or industrial manufacturing enquiry.",
     },
     products: {
       title: "B2B wood products | Tunibois",

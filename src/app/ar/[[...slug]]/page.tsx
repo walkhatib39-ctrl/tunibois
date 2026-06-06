@@ -77,8 +77,8 @@ function metadataByRoute(routeKey: RouteKey) {
       description: "حلول خشبية ومنصات ومكونات ومنتجات خشبية صديقة للبيئة للمستوردين والموزعين والصناعيين.",
     },
     contact: {
-      title: "اتصل بنا واطلب عرض سعر | Tunibois",
-      description: "تواصل مع Tunibois لطلب عرض سعر أو عينة أو مناقشة احتياجاتك للتصدير.",
+      title: "طلب عرض سعر للخشب وعينات وتواصل للتصدير | Tunibois",
+      description: "تواصل مع Tunibois لطلب عرض سعر B2B أو عينة أو مشروع تصدير أو توزيع أو تصنيع صناعي.",
     },
     products: {
       title: "منتجات خشبية B2B | Tunibois",
