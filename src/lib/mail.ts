@@ -35,6 +35,7 @@ export async function sendLeadEmail({ subject, heading, rows }: LeadEmail) {
     host: appConfig.MAIL_HOST,
     port: appConfig.MAIL_PORT,
     secure: appConfig.MAIL_PORT === 465,
+    ignoreTLS: appConfig.MAIL_IGNORE_TLS,
     auth: appConfig.MAIL_USER
       ? {
           user: appConfig.MAIL_USER,

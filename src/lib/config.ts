@@ -1,5 +1,11 @@
 import { z } from "zod";
 
+const booleanFromEnv = z.preprocess((value) => {
+  if (value === "true") return true;
+  if (value === "false") return false;
+  return value;
+}, z.boolean());
+
 const configSchema = z.object({
   DATABASE_URL: z.string().min(1),
   NEXT_PUBLIC_SITE_URL: z.string().url().default("http://localhost:3000"),
@@ -7,6 +13,7 @@ const configSchema = z.object({
   MAIL_PORT: z.coerce.number().int().positive().default(1025),
   MAIL_USER: z.string().optional().default(""),
   MAIL_PASSWORD: z.string().optional().default(""),
+  MAIL_IGNORE_TLS: booleanFromEnv.default(false),
   MAIL_FROM: z.string().min(1).default("Tunibois <devis@tunibois.tn>"),
   LEADS_TO_EMAIL: z.string().email().default("devis@tunibois.tn"),
 });
@@ -18,6 +25,7 @@ export const appConfig = configSchema.parse({
   MAIL_PORT: process.env.MAIL_PORT,
   MAIL_USER: process.env.MAIL_USER,
   MAIL_PASSWORD: process.env.MAIL_PASSWORD,
+  MAIL_IGNORE_TLS: process.env.MAIL_IGNORE_TLS,
   MAIL_FROM: process.env.MAIL_FROM,
   LEADS_TO_EMAIL: process.env.LEADS_TO_EMAIL,
 });

@@ -31,6 +31,7 @@ MAIL_HOST="SMTP_HOST"
 MAIL_PORT="465"
 MAIL_USER="SMTP_USER"
 MAIL_PASSWORD="SMTP_PASSWORD"
+MAIL_IGNORE_TLS="false"
 MAIL_FROM="Tunibois <devis@tunibois.tn>"
 LEADS_TO_EMAIL="devis@tunibois.tn"
 ```
