@@ -84,8 +84,8 @@ function metadataByRoute(routeKey: RouteKey) {
       description: "Catalogue Tunibois: palettes, pellets, agitateurs, bâtonnets, couverts, panneaux, composants et solutions bois sur mesure.",
     },
     woods: {
-      title: "Essences de bois | Tunibois",
-      description: "Bois d'olivier, hêtre, eucalyptus blanc, pin d'Alep et applications industrielles pour produits bois B2B.",
+      title: "Essences de bois B2B | Olivier, hêtre, eucalyptus et pin d'Alep | Tunibois",
+      description: "Comparez les essences Tunibois pour production industrielle et export: bois d'olivier, hêtre, eucalyptus blanc et pin d'Alep selon usage, séchage et conditionnement.",
     },
     guides: {
       title: "Guides techniques bois et export | Tunibois",

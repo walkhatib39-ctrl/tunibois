@@ -85,8 +85,8 @@ function metadataByRoute(routeKey: RouteKey) {
       description: "Tunibois catalogue: pallets, pellets, stirrers, sticks, cutlery, panels, components and custom wood solutions.",
     },
     woods: {
-      title: "Wood species | Tunibois",
-      description: "Olive wood, beech, white eucalyptus, Aleppo pine and industrial applications for B2B wood products.",
+      title: "B2B wood species | Olive, beech, eucalyptus and Aleppo pine | Tunibois",
+      description: "Compare Tunibois wood species for industrial production and export: olive wood, beech, white eucalyptus and Aleppo pine by use, drying and packing.",
     },
     guides: {
       title: "Wood and export technical guides | Tunibois",
