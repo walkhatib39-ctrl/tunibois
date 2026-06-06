@@ -69,8 +69,8 @@ function metadataByRoute(routeKey: RouteKey) {
       description: "تصنع Tunibois وتصدر منتجات ومكونات ومنصات وحلولا خشبية صديقة للبيئة للمشترين المهنيين الدوليين.",
     },
     factory: {
-      title: "المصنع | تحويل صناعي للخشب | Tunibois",
-      description: "تحويل وتصنيع ومراقبة جودة وتحضير للتصدير انطلاقا من تونس.",
+      title: "مصنع خشب B2B | تحويل ومراقبة وتصدير | Tunibois",
+      description: "تعرف على مصنع Tunibois: تحويل الخشب، تصنيع حسب الطلب، مراقبة الجودة، تغليف صناعي وتحضير للتصدير.",
     },
     export: {
       title: "تصدير الخشب من تونس | Tunibois",

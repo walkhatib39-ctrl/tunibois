@@ -68,8 +68,8 @@ function renderRoute(routeKey: RouteKey) {
 function metadataByRoute(routeKey: RouteKey) {
   const map: Partial<Record<RouteKey, { title: string; description: string }>> = {
     factory: {
-      title: "Notre usine | Transformation industrielle du bois | Tunibois",
-      description: "Découvrez l'approche industrielle de Tunibois pour transformer, fabriquer, contrôler et préparer les produits bois à l'export.",
+      title: "Notre usine bois B2B | Transformation, contrôle et export | Tunibois",
+      description: "Découvrez l'usine Tunibois: transformation bois, fabrication sur demande, contrôle qualité, conditionnement industriel et préparation export.",
     },
     export: {
       title: "Export bois depuis la Tunisie | Tunibois",
