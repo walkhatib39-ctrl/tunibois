@@ -14,67 +14,15 @@ export const contactHero = {
     ar: "أرسل احتياجك مع المنتج والأبعاد والكميات وبلد الوجهة والمتطلبات التقنية. تقوم Tunibois بتأهيل الطلب والرد بأساس عملي: الجدوى والمدة والتغليف والخطوات التالية.",
   },
   primary: {
-    fr: "Demander un devis",
-    en: "Request a quote",
-    ar: "طلب عرض سعر",
-  },
-  secondary: {
-    fr: "Demander un échantillon",
-    en: "Request a sample",
-    ar: "طلب عينة",
+    fr: "Accéder au formulaire",
+    en: "Go to the form",
+    ar: "الانتقال إلى النموذج",
   },
 } satisfies {
   primary: LocalizedText;
-  secondary: LocalizedText;
   text: LocalizedText;
   title: LocalizedText;
 };
-
-export const contactPaths = [
-  {
-    anchor: "quote",
-    title: {
-      fr: "Demande de devis",
-      en: "Quote request",
-      ar: "طلب عرض سعر",
-    },
-    text: {
-      fr: "Pour chiffrer un produit, valider un volume, préparer un conditionnement ou cadrer un délai de production.",
-      en: "To price a product, validate volume, prepare packing or frame a production lead time.",
-      ar: "لتسعير منتج أو تأكيد حجم أو تحضير تغليف أو تحديد مدة إنتاج.",
-    },
-  },
-  {
-    anchor: "sample",
-    title: {
-      fr: "Demande d'échantillon",
-      en: "Sample request",
-      ar: "طلب عينة",
-    },
-    text: {
-      fr: "Pour vérifier une essence, une finition, une section, une tolérance ou une présentation avant commande.",
-      en: "To check a wood species, finish, section, tolerance or presentation before ordering.",
-      ar: "للتحقق من نوع الخشب أو التشطيب أو المقطع أو التفاوتات أو العرض قبل الطلب.",
-    },
-  },
-  {
-    anchor: "commercial-contact",
-    title: {
-      fr: "Contact commercial",
-      en: "Commercial contact",
-      ar: "تواصل تجاري",
-    },
-    text: {
-      fr: "Pour parler export, distribution, partenariat industriel ou cahier des charges spécifique.",
-      en: "For export, distribution, industrial partnership or specific specification discussions.",
-      ar: "لنقاش التصدير أو التوزيع أو الشراكة الصناعية أو دفتر شروط خاص.",
-    },
-  },
-] satisfies Array<{
-  anchor: string;
-  text: LocalizedText;
-  title: LocalizedText;
-}>;
 
 export const contactChecklist = [
   {
@@ -133,40 +81,106 @@ export const contactQualification = {
 };
 
 export const contactForms = {
-  quote: {
+  commercialRequest: {
     title: {
-      fr: "Demande de devis export",
-      en: "Export quote request",
-      ar: "طلب عرض تصدير",
+      fr: "Demande de devis ou d'échantillon",
+      en: "Quote or sample request",
+      ar: "طلب عرض سعر أو عينة",
     },
     text: {
-      fr: "Indiquez le produit, la quantité, les dimensions, la destination et les contraintes attendues. Plus la demande est précise, plus la réponse peut être utile.",
-      en: "Indicate the product, quantity, dimensions, destination and expected constraints. The more precise the enquiry, the more useful the reply can be.",
-      ar: "اذكر المنتج والكمية والأبعاد والوجهة والمتطلبات المتوقعة. كلما كان الطلب أدق كان الرد أكثر فائدة.",
-    },
-  },
-  sample: {
-    title: {
-      fr: "Demande d'échantillon",
-      en: "Sample request",
-      ar: "طلب عينة",
-    },
-    text: {
-      fr: "Précisez l'échantillon attendu, le contexte de validation et l'adresse de livraison pour étudier l'envoi possible.",
-      en: "Specify the expected sample, validation context and delivery address so the possible shipment can be reviewed.",
-      ar: "حدد العينة المطلوبة وسياق التحقق وعنوان التسليم لدراسة إمكانية الإرسال.",
-    },
-  },
-  contact: {
-    title: {
-      fr: "Contact commercial",
-      en: "Commercial contact",
-      ar: "تواصل تجاري",
-    },
-    text: {
-      fr: "Utilisez ce formulaire pour une prise de contact export, distribution, partenariat ou demande industrielle qui ne rentre pas dans un devis immédiat.",
-      en: "Use this form for export, distribution, partnership or industrial discussions that do not yet fit an immediate quotation.",
-      ar: "استخدم هذا النموذج للتصدير أو التوزيع أو الشراكة أو النقاشات الصناعية التي لا تدخل بعد في عرض سعر مباشر.",
+      fr: "Choisissez le type de demande, puis indiquez le produit, les quantités, la destination et les contraintes utiles à l'étude.",
+      en: "Choose the enquiry type, then indicate the product, quantities, destination and useful constraints for review.",
+      ar: "اختر نوع الطلب ثم اذكر المنتج والكميات والوجهة والمتطلبات المفيدة للدراسة.",
     },
   },
 } satisfies Record<string, { text: LocalizedText; title: LocalizedText }>;
+
+export const commercialRequestForm = {
+  labels: {
+    requestType: {
+      fr: "Type de demande",
+      en: "Enquiry type",
+      ar: "نوع الطلب",
+    },
+    name: {
+      fr: "Nom",
+      en: "Name",
+      ar: "الاسم",
+    },
+    company: {
+      fr: "Société",
+      en: "Company",
+      ar: "الشركة",
+    },
+    country: {
+      fr: "Pays de destination",
+      en: "Destination country",
+      ar: "بلد الوجهة",
+    },
+    phone: {
+      fr: "Téléphone",
+      en: "Phone",
+      ar: "الهاتف",
+    },
+    email: {
+      fr: "Email",
+      en: "Email",
+      ar: "البريد الإلكتروني",
+    },
+    product: {
+      fr: "Produit recherché",
+      en: "Requested product",
+      ar: "المنتج المطلوب",
+    },
+    quantity: {
+      fr: "Quantité ou volume",
+      en: "Quantity or volume",
+      ar: "الكمية أو الحجم",
+    },
+    deliveryAddress: {
+      fr: "Adresse de livraison échantillon",
+      en: "Sample delivery address",
+      ar: "عنوان تسليم العينة",
+    },
+    message: {
+      fr: "Dimensions, contraintes, finition, conditionnement ou message",
+      en: "Dimensions, constraints, finish, packing or message",
+      ar: "الأبعاد والمتطلبات والتشطيب والتغليف أو الرسالة",
+    },
+    submit: {
+      fr: "Envoyer la demande",
+      en: "Send enquiry",
+      ar: "إرسال الطلب",
+    },
+    sending: {
+      fr: "Envoi...",
+      en: "Sending...",
+      ar: "جار الإرسال...",
+    },
+    success: {
+      fr: "Votre demande a bien été envoyée.",
+      en: "Your enquiry has been sent.",
+      ar: "تم إرسال طلبك بنجاح.",
+    },
+    error: {
+      fr: "Impossible d'envoyer la demande. Merci de réessayer.",
+      en: "The enquiry could not be sent. Please try again.",
+      ar: "تعذر إرسال الطلب. الرجاء المحاولة مرة أخرى.",
+    },
+  },
+  requestTypes: {
+    quote: {
+      fr: "Devis",
+      en: "Quote",
+      ar: "عرض سعر",
+    },
+    sample: {
+      fr: "Échantillon",
+      en: "Sample",
+      ar: "عينة",
+    },
+  },
+} satisfies {
+  labels: Record<string, LocalizedText>;
+  requestTypes: Record<"quote" | "sample", LocalizedText>;
+};

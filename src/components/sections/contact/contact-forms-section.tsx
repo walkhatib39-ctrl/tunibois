@@ -1,4 +1,4 @@
-import { LeadForm } from "@/components/forms/lead-form";
+import { CommercialRequestForm } from "@/components/forms/commercial-request-form";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { contactForms } from "@/content/pages/contact";
@@ -10,15 +10,15 @@ type ContactFormsSectionProps = {
 };
 
 const sectionTitle = {
-  fr: "Envoyer la bonne demande au bon interlocuteur",
-  en: "Send the right enquiry to the right contact",
-  ar: "أرسل الطلب المناسب إلى الجهة المناسبة",
+  fr: "Un seul formulaire pour qualifier la demande",
+  en: "One form to qualify the enquiry",
+  ar: "نموذج واحد لتأهيل الطلب",
 };
 
 const sectionText = {
-  fr: "Choisissez le formulaire qui correspond à votre besoin. Chaque demande est enregistrée et transmise pour suivi commercial.",
-  en: "Choose the form that matches your need. Each enquiry is saved and forwarded for commercial follow-up.",
-  ar: "اختر النموذج المناسب لاحتياجك. يتم حفظ كل طلب وإرساله للمتابعة التجارية.",
+  fr: "Choisissez Devis ou Échantillon, puis ajoutez les informations utiles pour préparer une réponse exploitable.",
+  en: "Choose Quote or Sample, then add the useful information needed to prepare a workable reply.",
+  ar: "اختر عرض سعر أو عينة، ثم أضف المعلومات المفيدة لتحضير رد قابل للدراسة.",
 };
 
 export function ContactFormsSection({ locale }: ContactFormsSectionProps) {
@@ -29,44 +29,18 @@ export function ContactFormsSection({ locale }: ContactFormsSectionProps) {
       <Container>
         <SectionHeading title={sectionTitle[locale]} intro={sectionText[locale]} />
 
-        <div className="mt-10 grid gap-10">
-          <FormBlock id="quote" index="01" locale={locale} mode="quote" sourcePath={sourcePath} />
-
-          <div className="grid gap-10 lg:grid-cols-2">
-            <FormBlock id="sample" index="02" locale={locale} mode="sample" sourcePath={sourcePath} />
-            <FormBlock id="commercial-contact" index="03" locale={locale} mode="contact" sourcePath={sourcePath} />
+        <article id="quote" className="mt-10 max-w-5xl scroll-mt-28">
+          <span id="sample" className="block scroll-mt-28" aria-hidden />
+          <div className="mb-5 flex flex-col gap-4 border-l-2 border-accent pl-4 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+              <p className="text-sm font-semibold text-accent">01</p>
+              <h2 className="mt-2 text-2xl font-semibold leading-tight text-brand-strong">{contactForms.commercialRequest.title[locale]}</h2>
+              <p className="mt-3 max-w-3xl text-sm leading-6 text-muted">{contactForms.commercialRequest.text[locale]}</p>
+            </div>
           </div>
-        </div>
+          <CommercialRequestForm locale={locale} sourcePath={sourcePath} />
+        </article>
       </Container>
     </section>
-  );
-}
-
-function FormBlock({
-  id,
-  index,
-  locale,
-  mode,
-  sourcePath,
-}: {
-  id: string;
-  index: string;
-  locale: Locale;
-  mode: "quote" | "sample" | "contact";
-  sourcePath: string;
-}) {
-  const copy = contactForms[mode];
-
-  return (
-    <article id={id} className="scroll-mt-28">
-      <div className="mb-5 flex flex-col gap-4 border-l-2 border-accent pl-4 sm:flex-row sm:items-start sm:justify-between">
-        <div>
-          <p className="text-sm font-semibold text-accent">{index}</p>
-          <h2 className="mt-2 text-2xl font-semibold leading-tight text-brand-strong">{copy.title[locale]}</h2>
-          <p className="mt-3 max-w-3xl text-sm leading-6 text-muted">{copy.text[locale]}</p>
-        </div>
-      </div>
-      <LeadForm mode={mode} locale={locale} sourcePath={sourcePath} />
-    </article>
   );
 }

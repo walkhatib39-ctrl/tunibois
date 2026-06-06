@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { contactHero } from "@/content/pages/contact";
@@ -31,10 +31,6 @@ export function ContactHero({ locale }: ContactHeroProps) {
           <p className="mt-6 max-w-3xl text-lg leading-8 text-white/76">{contactHero.text[locale]}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button href="#quote">{contactHero.primary[locale]}</Button>
-            <Button href="#sample" variant="outline" className="border-white/35 text-white hover:bg-white/10">
-              {contactHero.secondary[locale]}
-              <FontAwesomeIcon icon={faArrowRight} className="size-3" aria-hidden />
-            </Button>
           </div>
         </div>
 
