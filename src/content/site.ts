@@ -4,5 +4,5 @@ export const site = {
   email: "devis@tunibois.tn",
   phone: "97 706 721",
   tagline: "Industrial wood transformation and export partner from Tunisia",
-  address: "Tunisie",
+  address: "Borj Cedria, Tunisie",
 };
