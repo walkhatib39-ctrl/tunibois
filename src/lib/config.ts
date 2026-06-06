@@ -14,6 +14,8 @@ const configSchema = z.object({
   MAIL_USER: z.string().optional().default(""),
   MAIL_PASSWORD: z.string().optional().default(""),
   MAIL_IGNORE_TLS: booleanFromEnv.default(false),
+  MAIL_TRANSPORT: z.enum(["smtp", "sendmail"]).default("smtp"),
+  MAIL_SENDMAIL_PATH: z.string().min(1).default("/usr/sbin/sendmail"),
   MAIL_FROM: z.string().min(1).default("Tunibois <devis@tunibois.tn>"),
   LEADS_TO_EMAIL: z.string().email().default("devis@tunibois.tn"),
 });
@@ -26,6 +28,8 @@ export const appConfig = configSchema.parse({
   MAIL_USER: process.env.MAIL_USER,
   MAIL_PASSWORD: process.env.MAIL_PASSWORD,
   MAIL_IGNORE_TLS: process.env.MAIL_IGNORE_TLS,
+  MAIL_TRANSPORT: process.env.MAIL_TRANSPORT,
+  MAIL_SENDMAIL_PATH: process.env.MAIL_SENDMAIL_PATH,
   MAIL_FROM: process.env.MAIL_FROM,
   LEADS_TO_EMAIL: process.env.LEADS_TO_EMAIL,
 });

@@ -31,18 +31,25 @@ function rowsToHtml(rows: LeadEmail["rows"]) {
 }
 
 export async function sendLeadEmail({ subject, heading, rows }: LeadEmail) {
-  const transporter = nodemailer.createTransport({
-    host: appConfig.MAIL_HOST,
-    port: appConfig.MAIL_PORT,
-    secure: appConfig.MAIL_PORT === 465,
-    ignoreTLS: appConfig.MAIL_IGNORE_TLS,
-    auth: appConfig.MAIL_USER
-      ? {
-          user: appConfig.MAIL_USER,
-          pass: appConfig.MAIL_PASSWORD,
-        }
-      : undefined,
-  });
+  const transporter =
+    appConfig.MAIL_TRANSPORT === "sendmail"
+      ? nodemailer.createTransport({
+          sendmail: true,
+          newline: "unix",
+          path: appConfig.MAIL_SENDMAIL_PATH,
+        })
+      : nodemailer.createTransport({
+          host: appConfig.MAIL_HOST,
+          port: appConfig.MAIL_PORT,
+          secure: appConfig.MAIL_PORT === 465,
+          ignoreTLS: appConfig.MAIL_IGNORE_TLS,
+          auth: appConfig.MAIL_USER
+            ? {
+                user: appConfig.MAIL_USER,
+                pass: appConfig.MAIL_PASSWORD,
+              }
+            : undefined,
+        });
 
   await transporter.sendMail({
     from: appConfig.MAIL_FROM,

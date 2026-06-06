@@ -32,6 +32,8 @@ MAIL_PORT="465"
 MAIL_USER="SMTP_USER"
 MAIL_PASSWORD="SMTP_PASSWORD"
 MAIL_IGNORE_TLS="false"
+MAIL_TRANSPORT="smtp"
+MAIL_SENDMAIL_PATH="/usr/sbin/sendmail"
 MAIL_FROM="Tunibois <devis@tunibois.tn>"
 LEADS_TO_EMAIL="devis@tunibois.tn"
 ```
