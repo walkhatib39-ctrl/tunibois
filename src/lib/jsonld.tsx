@@ -49,6 +49,21 @@ export function productJsonLd(product: Product, locale: Locale) {
   };
 }
 
+export function faqPageJsonLd(faq: Array<{ q: Record<Locale, string>; a: Record<Locale, string> }>, locale: Locale) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((item) => ({
+      "@type": "Question",
+      name: item.q[locale],
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a[locale],
+      },
+    })),
+  };
+}
+
 export function JsonLdScript({ data }: { data: object }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
 }

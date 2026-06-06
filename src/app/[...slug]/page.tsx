@@ -72,8 +72,8 @@ function metadataByRoute(routeKey: RouteKey) {
       description: "Découvrez l'usine Tunibois: transformation bois, fabrication sur demande, contrôle qualité, conditionnement industriel et préparation export.",
     },
     export: {
-      title: "Export bois depuis la Tunisie | Tunibois",
-      description: "Solutions bois, palettes, composants et produits eco wood préparés pour importateurs, distributeurs et industriels internationaux.",
+      title: "Export bois depuis la Tunisie | Palettes, composants et produits B2B | Tunibois",
+      description: "Tunibois prépare des commandes bois export: produits B2B, conditionnement, documents, transport et accompagnement pour importateurs et industriels.",
     },
     contact: {
       title: "Demande de devis bois, échantillon et contact export | Tunibois",

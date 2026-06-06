@@ -73,8 +73,8 @@ function metadataByRoute(routeKey: RouteKey) {
       description: "Discover the Tunibois factory: wood transformation, made-to-order production, quality control, industrial packing and export preparation.",
     },
     export: {
-      title: "Wood export from Tunisia | Tunibois",
-      description: "Wood solutions, pallets, components and eco wood products prepared for importers, distributors and international manufacturers.",
+      title: "Wood export from Tunisia | Pallets, components and B2B products | Tunibois",
+      description: "Tunibois prepares export wood orders: B2B products, packing, documents, transport and support for importers and industrial buyers.",
     },
     contact: {
       title: "Wood quote request, samples and export contact | Tunibois",
